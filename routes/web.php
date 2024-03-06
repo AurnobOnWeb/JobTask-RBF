@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Tree\MarkleTreeController;
+use App\Http\Controllers\Tree\TreeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [TreeController::class, 'index']);
+Route::post('/genarate-tree', [TreeController::class, 'genrateTree'])->name('tree.genarate');
+
+Route::get('/markle', [MarkleTreeController::class, 'index']);
+
