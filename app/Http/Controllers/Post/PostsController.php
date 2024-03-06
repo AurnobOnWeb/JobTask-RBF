@@ -4,8 +4,7 @@ namespace App\Http\Controllers\Post;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\PostResource;
-use App\Models\comment;
-use App\Models\likes;
+
 use App\Models\Posts;
 use App\Traits\HttpResponses;
 use Illuminate\Http\Request;

@@ -5,11 +5,13 @@ namespace App\Http\Controllers\Post;
 use App\Http\Controllers\Controller;
 use App\Models\comment;
 use App\Models\Posts;
+use App\Traits\HttpResponses;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 class CommentsController extends Controller
 {
+    use HttpResponses;
     public function comment(Request $request)
     {
         $validator = Validator::make($request->all(), [
